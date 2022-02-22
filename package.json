@@ -1,0 +1,25 @@
+{
+  "name": "balance_front",
+  "version": "0.0.1",
+  "description": "Front for life balance tracker",
+  "main": "index.js",
+  "scripts": {
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pew-rivza/balance_front.git"
+  },
+  "keywords": [
+    "balance",
+    "wheel",
+    "balance",
+    "tracking"
+  ],
+  "author": "pew-rivza",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/pew-rivza/balance_front/issues"
+  },
+  "homepage": "https://github.com/pew-rivza/balance_front#readme"
+}
