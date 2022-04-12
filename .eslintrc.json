@@ -24,6 +24,7 @@
         "@typescript-eslint",
         "prettier"
     ],
+    "ignorePatterns": ["src/stories"],
     "rules": {
         "require-jsdoc": "off",
         "@typescript-eslint/ban-ts-comment": "off",
