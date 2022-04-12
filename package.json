@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Front for life balance tracker",
   "scripts": {
+    "start": "cd dist && live-server",
     "build": "webpack --config webpack.config.js",
     "lint": "eslint --ext .ts,.tsx src --fix",
     "storybook": "start-storybook -p 6006",
