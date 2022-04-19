@@ -7,3 +7,5 @@ export const parameters = {
     },
   },
 }
+
+// TODO: настроить конфиг сторибука

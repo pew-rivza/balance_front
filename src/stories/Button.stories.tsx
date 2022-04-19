@@ -39,3 +39,5 @@ Small.args = {
   size: "small",
   label: "Button",
 };
+
+// TODO: удалить все тестовые сторисы

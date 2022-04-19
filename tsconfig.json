@@ -5,6 +5,12 @@
     "module": "es6",
     "jsx": "react",
     "noImplicitAny": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "baseUrl": "src",
+    "typeRoots": ["node_modules/@types", "src/typings"],
+    "paths": {
+      "components": ["components/*"],
+    },
   }
 }
