@@ -1,0 +1,14 @@
+[
+  { "id": 1, "name": "Самооценка", "icon": "iconoir:three-stars" },
+  { "id": 2, "name": "Финансы", "icon": "carbon:chart-line-data" },
+  { "id": 3, "name": "Образование", "icon": "fluent:glance-default-12-regular" },
+  { "id": 4, "name": "Семья", "icon": "iconoir:home-user" },
+  { "id": 5, "name": "Хобби", "icon": "iconoir:palette" },
+  { "id": 6, "name": "Здоровье", "icon": "fluent:glance-default-12-regular" },
+  { "id": 7, "name": "Отношения", "icon": "iconoir:donate" },
+  { "id": 8, "name": "Секс", "icon": "fluent:glance-default-12-regular" },
+  { "id": 9, "name": "Альтруизм", "icon": "fluent:glance-default-12-regular" },
+  { "id": 10, "name": "Работа", "icon": "iconoir:laptop" },
+  { "id": 11, "name": "Дружба", "icon": "carbon:friendship" },
+  { "id": 12, "name": "Уединение", "icon": "fluent:glance-default-12-regular" }
+]
