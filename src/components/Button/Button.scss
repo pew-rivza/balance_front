@@ -1,5 +1,7 @@
+@import "../../variables.scss";
+
 .button {
-  background: #ffb3fd;
+  background: $basic_color_dark;
   color: white;
   border: 0;
   padding: 5px 10px;
