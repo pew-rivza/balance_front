@@ -3,8 +3,7 @@
   "version": "0.0.1",
   "description": "Front for life balance tracker",
   "scripts": {
-    "start": "cd dist && live-server",
-    "build": "webpack --config webpack.config.js",
+    "start": "webpack serve --config webpack.config.js",
     "lint": "eslint --ext .ts,.tsx src --fix",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
@@ -65,6 +64,7 @@
     "ts-loader": "^9.2.6",
     "typescript": "^4.5.5",
     "webpack": "^5.69.1",
-    "webpack-cli": "^4.9.2"
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.8.1"
   }
 }

@@ -2,8 +2,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // TODO: Сделать конфигурацию под себя
-// TODO: настроить hmr
-// TODO: а sass точно нужен в зависимостях от продакшана (package.json)? его лучше вообще выпилить и без этого работало
 
 module.exports = {
   mode: 'development',
@@ -43,5 +41,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'public', 'index.html')
     }),
-  ]
+  ],
+  devServer: {
+    hot: true,
+    open: true,
+    port: 3002,
+  },
 }
