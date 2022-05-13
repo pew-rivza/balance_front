@@ -5,7 +5,9 @@ import styles from "./Button.scss";
 interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
   /** Текст внутри кнопки */
   value: string;
+  /** Обработчик клика на кнопку */
   onClick: React.MouseEventHandler<HTMLButtonElement>;
+  /** Массив классов для кнопки */
   classNames?: Array<string>;
   type?: ButtonType;
 }
