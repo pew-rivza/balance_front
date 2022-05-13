@@ -2,6 +2,8 @@ import React from "react";
 import utils from "utils";
 import styles from "./Button.scss";
 
+// eslint-disable-next-line no-undef
+type ButtonType = JSX.IntrinsicElements["button"]["type"];
 interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
   /** Текст внутри кнопки */
   value: string;
@@ -12,9 +14,7 @@ interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
   type?: ButtonType;
 }
 
-type ButtonType = "button" | "submit" | "reset";
-
-const Button = ({ value, classNames = [], onClick, type  = "button", ...props }: ButtonProps) => {
+const Button = ({ value, classNames = [], onClick, type = "button", ...props }: ButtonProps) => {
   return (
     <button
       type={type}

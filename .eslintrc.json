@@ -24,7 +24,6 @@
         "@typescript-eslint",
         "prettier"
     ],
-    "ignorePatterns": ["src/stories"],
     "rules": {
         "require-jsdoc": "off",
         "@typescript-eslint/ban-ts-comment": "off",
@@ -35,6 +34,7 @@
         "no-console": "off",
         "react/jsx-props-no-spreading": "off",
         "react/require-default-props": "off",
+        "react/button-has-type": "off",
         "react/function-component-definition": ["error", { "namedComponents": "arrow-function" }]
     }
 }
