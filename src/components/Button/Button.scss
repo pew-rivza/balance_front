@@ -6,14 +6,33 @@
   border: 0;
   border-radius: 15px;
   color: $main_text_color;
+  cursor: pointer;
   display: flex;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   justify-content: center;
   padding: 7px 30px 6px 30px;
+  position: relative;
   transition: 200ms;
 
   &:active {
     background: $secondary_color;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:focus-visible:before {
+    border: 1px solid $secondary_color;
+    border-radius: 100px;
+    bottom: -4px;
+    box-shadow: inset 2px 2px 0 white, inset -2px -2px 0 white;
+    content: '';
+    left: -4px;
+    position: absolute;
+    right: -4px;
+    top: -4px;
+    z-index: 1;
   }
 }
