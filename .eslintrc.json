@@ -30,6 +30,11 @@
         "@typescript-eslint/ban-ts-comment": "off",
         "react/jsx-filename-extension": "off",
         "import/extensions": "off",
-        "import/no-unresolved": "off"
+        "import/no-unresolved": "off",
+        "no-restricted-exports": "off",
+        "no-console": "off",
+        "react/jsx-props-no-spreading": "off",
+        "react/require-default-props": "off",
+        "react/function-component-definition": ["error", { "namedComponents": "arrow-function" }]
     }
 }

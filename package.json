@@ -4,6 +4,7 @@
   "description": "Front for life balance tracker",
   "scripts": {
     "start": "webpack serve --config webpack.config.js",
+    "build": "webpack --config webpack.config.js",
     "lint": "eslint --ext .ts,.tsx src --fix",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
@@ -28,6 +29,7 @@
     "printWidth": 100
   },
   "dependencies": {
+    "@storybook/react": "^6.4.21",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
@@ -38,7 +40,6 @@
     "@storybook/addon-interactions": "^6.4.21",
     "@storybook/addon-links": "^6.4.21",
     "@storybook/preset-scss": "^1.0.3",
-    "@storybook/react": "^6.4.21",
     "@storybook/testing-library": "^0.0.9",
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.11",
