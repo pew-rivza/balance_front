@@ -15,5 +15,9 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 export const Default = Template.bind({});
 
 Default.args = {
-  value: "hello styles? 8",
+  value: "Добавить",
+  onClick: () => console.log("clicked from storybook!1"),
 };
+
+// TODO: доделать сторис для кнопки
+// TODO: написать тесты для кнопки (визуальные и функциональные)
