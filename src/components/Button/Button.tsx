@@ -9,17 +9,17 @@ interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
   value: string;
   /** Обработчик клика на кнопку */
   onClick: React.MouseEventHandler<HTMLButtonElement>;
+  /** Флаг, заблокирована ли кнопка */
+  disabled?: boolean;
   /** Массив классов для кнопки */
   classNames?: Array<string>;
   type?: ButtonType;
 }
 
-const Button = ({ value, classNames = [], onClick, type = "button", ...props }: ButtonProps) => {
+const Button = ({ value, classNames = [], type = "button", ...props }: ButtonProps) => {
   return (
     <button
-      type={type}
       className={utils.makeCn([styles.button, ...classNames])}
-      onClick={onClick}
       {...props}
     >
       {value}

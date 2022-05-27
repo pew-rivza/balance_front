@@ -1,6 +1,5 @@
 $main_color: #70B8C2;
 $secondary_color: #59A3AD;
-$main_text_color: #FFFFFF;
 
 $basic_color_light: #C5CDCE;
 $basic_color: #6C6F70;
@@ -12,3 +11,8 @@ $gradient_main_color_light: #BCE6E7;
 $gradient_main_color_dark: #5CACB8;
 $gradient_basic_color_light: #FFFFFF;
 $gradient_basic_color_dark: #E5E8EF;
+
+$main_text_color: #FFFFFF;
+$disabled_color: $basic_color_light;
+
+$transition_speed: 200ms;

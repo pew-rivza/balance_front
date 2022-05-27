@@ -1,6 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { fireEvent, screen } from "@storybook/testing-library";
+import { action } from '@storybook/addon-actions';
 
 // TODO: посмотреть, какие есть аддоны и добавить нужные
 
@@ -14,11 +15,6 @@ export default {
     onClick: { control: false },
     classNames: { control: false },
   },
-  parameters: {
-    actions: {
-      handles: ["click", "mousedown"],
-    },
-  },
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
@@ -28,7 +24,8 @@ export const Default = Template.bind({});
 Default.storyName = "Button";
 Default.args = {
   value: "Добавить",
-  onClick: () => console.log("clicked from storybook!1"),
+  onClick: action('button clicked'),
+  disabled: false,
 };
 Default.play = async () => {
   await fireEvent.click(screen.getByRole("button"));
