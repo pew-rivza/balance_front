@@ -1,0 +1,48 @@
+@import "../../variables.scss";
+
+.checkbox {
+  position: relative;
+  width: 0;
+  margin: 0;
+  cursor: pointer;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 14px;
+    width: 14px;
+    border: 1px solid $basic_color_light;
+    background: transparent;
+    content: "";
+    transition: $transition_speed;
+  }
+
+  &:disabled:before {
+    background: $disabled_color;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 4px;
+    height: 9px;
+    border: solid $success_color;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: $transition_speed;
+  }
+
+  &:checked:after {
+    opacity: 1;
+  }
+
+  &:disabled:after {
+    border-color: $main_text_color;
+  }
+}
