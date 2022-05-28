@@ -15,11 +15,13 @@ interface CheckboxProps extends React.HTMLProps<HTMLInputElement> {
 
 const Checkbox = ({ classNames = [], ...props }: CheckboxProps) => {
   return (
-    <input
-      type="checkbox"
-      className={utils.makeCn([styles.checkbox, ...classNames])}
-      {...props}
-    />
+    <div className={styles["checkbox-container"]}>
+      <input
+        type="checkbox"
+        className={utils.makeCn([styles.checkbox, ...classNames])}
+        {...props}
+      />
+    </div>
   );
 };
 
