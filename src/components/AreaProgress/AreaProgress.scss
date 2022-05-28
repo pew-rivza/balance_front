@@ -1,0 +1,18 @@
+@import "../../variables.scss";
+
+.area-progress {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  .value {
+    font-family: $font-family;
+    font-size: $font-size-small;
+    color: $basic_text_color;
+  }
+
+  .pie-container {
+    width: 27px;
+    height: 27px;
+  }
+}
