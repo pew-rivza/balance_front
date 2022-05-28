@@ -8,8 +8,8 @@
   color: $main_text_color;
   cursor: pointer;
   display: flex;
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
+  font-family: $font-family;
+  font-size: $font-size-small;
   justify-content: center;
   padding: 7px 30px 6px 30px;
   position: relative;
@@ -32,7 +32,7 @@
     border: 1px solid $secondary_color;
     border-radius: 100px;
     bottom: -4px;
-    box-shadow: inset 2px 2px 0 white, inset -2px -2px 0 white;
+    box-shadow: inset 2px 2px 0 transparent, inset -2px -2px 0 transparent;
     content: '';
     left: -4px;
     position: absolute;
