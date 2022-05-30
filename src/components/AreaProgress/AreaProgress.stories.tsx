@@ -4,12 +4,10 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import AreaProgress from "./AreaProgress";
 
 export default {
-  title: "Simple Components/Checkbox",
+  title: "Simple Components/AreaProgress",
   component: AreaProgress,
   argTypes: {
-    onChange: { control: false },
     classNames: { control: false },
-    readOnly: { table: { disable: true } },
   }
 } as ComponentMeta<typeof AreaProgress>;
 
@@ -17,11 +15,9 @@ const Template: ComponentStory<typeof AreaProgress> = (args) => <AreaProgress {.
 
 export const Default = Template.bind({});
 
-Default.storyName = "Checkbox";
+Default.storyName = "AreaProgress";
 Default.args = {
-  checked: true,
-  disabled: false,
-  readOnly: true,
+  value: 45,
 };
 
-// TODO: написать тесты для checkbox (визуальные и функциональные)
+// TODO: написать тесты для AreaProgress (визуальные и функциональные)
