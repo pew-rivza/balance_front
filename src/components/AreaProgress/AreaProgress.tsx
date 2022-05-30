@@ -21,6 +21,9 @@ const colors = [
 ];
 
 const AreaProgress = ({ value, classNames = [] }: AreaProgressProps): JSX.Element => {
+  // @ts-ignore: сравнение со строкой нужно для сторибука
+  const isComplete: boolean = value === 100 || value === "100";
+
   const data = {
     datasets: [
       {
@@ -36,8 +39,8 @@ const AreaProgress = ({ value, classNames = [] }: AreaProgressProps): JSX.Elemen
     elements: {
       arc: {
         backgroundColor(context: any) {
-          const { start } = colors[context.dataIndex];
-          const { end } = colors[context.dataIndex];
+          const start = isComplete ? consts.gradientSuccessColorLight : colors[context.dataIndex].start;
+          const end =  isComplete ? consts.gradientSuccessColorDark : colors[context.dataIndex].end;
           return utils.getLinearGradient(context, start, end);
         },
       },
@@ -47,7 +50,7 @@ const AreaProgress = ({ value, classNames = [] }: AreaProgressProps): JSX.Elemen
   return (
     <div className={utils.makeCn([styles["area-progress"], ...classNames])}>
       <div className={styles.value}>{value}%</div>
-      <div className={styles["pie-container"]}>
+      <div className={utils.makeCn([styles["pie-container"], isComplete && styles.complete])}>
         <Pie data={data} options={options} />
       </div>
     </div>

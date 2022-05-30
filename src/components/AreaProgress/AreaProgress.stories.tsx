@@ -15,9 +15,14 @@ const Template: ComponentStory<typeof AreaProgress> = (args) => <AreaProgress {.
 
 export const Default = Template.bind({});
 
-Default.storyName = "AreaProgress";
 Default.args = {
   value: 45,
+};
+
+export const Complete = Template.bind({});
+
+Complete.args = {
+  value: 100,
 };
 
 // TODO: написать тесты для AreaProgress (визуальные и функциональные)
