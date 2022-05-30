@@ -39,8 +39,10 @@ const AreaProgress = ({ value, classNames = [] }: AreaProgressProps): JSX.Elemen
     elements: {
       arc: {
         backgroundColor(context: any) {
-          const start = isComplete ? consts.gradientSuccessColorLight : colors[context.dataIndex].start;
-          const end =  isComplete ? consts.gradientSuccessColorDark : colors[context.dataIndex].end;
+          const start = isComplete
+            ? consts.gradientSuccessColorLight
+            : colors[context.dataIndex].start;
+          const end = isComplete ? consts.gradientSuccessColorDark : colors[context.dataIndex].end;
           return utils.getLinearGradient(context, start, end);
         },
       },
