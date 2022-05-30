@@ -3,6 +3,7 @@
 .checkbox-container {
   height: 16px;
   width: 16px;
+  position: relative;
 }
 
 .checkbox {
@@ -27,7 +28,15 @@
     background: $disabled_color;
   }
 
-  // TODO: сделать focus-visible. Возможно, придется переделать сам чекбокс с бефоров на див
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:focus-visible:before {
+    box-shadow: 3px 3px white, 3px -3px white, -3px 3px white, -3px -3px white,
+    4px 4px $secondary_color, 4px -4px $secondary_color, -4px 4px $secondary_color, -4px -4px $secondary_color;
+    z-index: 1;
+  }
 
   &:after {
     border: solid $success_color;
