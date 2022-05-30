@@ -2,8 +2,8 @@ import React from "react";
 import utils from "utils";
 import consts from "consts";
 import { Ran } from "typings";
-import { Pie } from 'react-chartjs-2';
-import { Chart as ChartJS, ArcElement } from 'chart.js';
+import { Pie } from "react-chartjs-2";
+import { Chart as ChartJS, ArcElement } from "chart.js";
 import styles from "./AreaProgress.scss";
 
 ChartJS.register(ArcElement);
@@ -15,14 +15,19 @@ interface AreaProgressProps {
   classNames?: Array<string>;
 }
 
-const colors = [{ start:  consts.gradientMain_color_light, end: consts.gradientMain_color_dark}, { start:  consts.gradientBasic_color_light, end: consts.gradientBasic_color_dark}];
+const colors = [
+  { start: consts.gradientMainColorLight, end: consts.gradientMainColorDark },
+  { start: consts.gradientBasicColorLight, end: consts.gradientBasicColorDark },
+];
 
 const AreaProgress = ({ value, classNames = [] }: AreaProgressProps): JSX.Element => {
   const data = {
-    datasets: [{
-      data: [value, 100-value],
-      borderWidth: 0,
-    }],
+    datasets: [
+      {
+        data: [value, 100 - value],
+        borderWidth: 0,
+      },
+    ],
   };
 
   const options: any = {
@@ -30,25 +35,20 @@ const AreaProgress = ({ value, classNames = [] }: AreaProgressProps): JSX.Elemen
     // animation: null,
     elements: {
       arc: {
-        backgroundColor: function(context: any) {
-          const start = colors[context.dataIndex].start;
-          const end = colors[context.dataIndex].end;
+        backgroundColor(context: any) {
+          const { start } = colors[context.dataIndex];
+          const { end } = colors[context.dataIndex];
           return utils.getLinearGradient(context, start, end);
         },
-      }
-    }
-  }
-
-
+      },
+    },
+  };
 
   return (
     <div className={utils.makeCn([styles["area-progress"], ...classNames])}>
       <div className={styles.value}>{value}%</div>
       <div className={styles["pie-container"]}>
-        <Pie
-          data={data}
-          options={options}
-        />
+        <Pie data={data} options={options} />
       </div>
     </div>
   );

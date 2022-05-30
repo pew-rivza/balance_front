@@ -10,7 +10,7 @@ export default {
     onChange: { control: false },
     classNames: { control: false },
     readOnly: { table: { disable: true } },
-  }
+  },
 } as ComponentMeta<typeof Checkbox>;
 
 const Template: ComponentStory<typeof Checkbox> = (args) => <Checkbox {...args} />;

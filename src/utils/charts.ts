@@ -1,14 +1,19 @@
 const cache: Map<string, CanvasGradient> = new Map();
-let width: number, height: number;
+let width: number;
+let height: number;
 
 function getLinearGradient(context: any, colorStart: string, colorEnd: string): CanvasGradient {
-  const chart = context.chart;
+  const { chart } = context;
   const { ctx, chartArea } = chart;
-  if (!chartArea) { return null; }
+  if (!chartArea) {
+    return null;
+  }
 
   const chartWidth: number = chartArea.right - chartArea.left;
   const chartHeight: number = chartArea.bottom - chartArea.top;
-  if (width !== chartWidth || height !== chartHeight) { cache.clear(); }
+  if (width !== chartWidth || height !== chartHeight) {
+    cache.clear();
+  }
 
   let gradient = cache.get(colorStart + colorEnd);
 
@@ -25,6 +30,5 @@ function getLinearGradient(context: any, colorStart: string, colorEnd: string): 
 
   return gradient;
 }
-
 
 export default { getLinearGradient };

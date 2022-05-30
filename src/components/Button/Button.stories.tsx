@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { fireEvent, screen } from "@storybook/testing-library";
-import { action } from '@storybook/addon-actions';
+import { action } from "@storybook/addon-actions";
 
 // TODO: посмотреть, какие есть аддоны и добавить нужные
 
@@ -24,7 +24,7 @@ export const Default = Template.bind({});
 Default.storyName = "Button";
 Default.args = {
   value: "Добавить",
-  onClick: action('button clicked'),
+  onClick: action("button clicked"),
   disabled: false,
 };
 Default.play = async () => {

@@ -16,12 +16,14 @@ interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
   type?: ButtonType;
 }
 
-const Button = ({ value, classNames = [], type = "button", ...props }: ButtonProps): JSX.Element => {
+const Button = ({
+  value,
+  classNames = [],
+  type = "button",
+  ...props
+}: ButtonProps): JSX.Element => {
   return (
-    <button
-      className={utils.makeCn([styles.button, ...classNames])}
-      {...props}
-    >
+    <button className={utils.makeCn([styles.button, ...classNames])} type={type} {...props}>
       {value}
     </button>
   );

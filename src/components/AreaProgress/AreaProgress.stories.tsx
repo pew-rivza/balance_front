@@ -8,7 +8,7 @@ export default {
   component: AreaProgress,
   argTypes: {
     classNames: { control: false },
-  }
+  },
 } as ComponentMeta<typeof AreaProgress>;
 
 const Template: ComponentStory<typeof AreaProgress> = (args) => <AreaProgress {...args} />;
