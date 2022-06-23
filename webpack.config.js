@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 // TODO: Сделать конфигурацию под себя
 
 module.exports = {
-  mode: 'development',
+  mode: process.env.NODE_ENV,
   entry: path.join(__dirname, 'src', 'index.tsx'),
   target: 'web',
   resolve: {
@@ -13,6 +13,7 @@ module.exports = {
       utils: path.resolve(__dirname, "src/utils"),
       typings: path.resolve(__dirname, "src/typings"),
       consts: path.resolve(__dirname, "src/consts.ts"),
+      mocks: path.resolve(__dirname, "src/mocks"),
     },
     extensions: ['.ts', '.tsx', '.js'],
   },

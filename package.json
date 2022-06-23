@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "Front for life balance tracker",
   "scripts": {
-    "start": "webpack serve --config webpack.config.js",
+    "start": "cross-env NODE_ENV=production webpack serve --config webpack.config.js",
+    "dev": "cross-env NODE_ENV=development webpack serve --config webpack.config.js",
     "build": "webpack --config webpack.config.js",
     "lint": "eslint --ext .ts,.tsx src --fix",
     "storybook": "start-storybook -p 6006",
@@ -49,6 +50,7 @@
     "@typescript-eslint/eslint-plugin": "^5.17.0",
     "@typescript-eslint/parser": "^5.17.0",
     "babel-loader": "^8.2.4",
+    "cross-env": "^7.0.3",
     "css-loader": "^5.2.7",
     "eslint": "^8.12.0",
     "eslint-config-airbnb": "^19.0.4",
